@@ -2,7 +2,7 @@
   <div>
     <div
       class="table-container"
-      v-for="(party, index) in getBossPartyTableList.reverse()"
+      v-for="(party, index) in bossPartyTableList"
       :key="index"
       :id="'boss-party-table-' + index"
     >
@@ -86,7 +86,9 @@ import * as htmlToImage from "html-to-image";
 export default {
   store,
   data() {
-    return {};
+    return {
+      bossPartyTableList: [],
+    };
   },
   methods: {
     getDate(partyDate) {
@@ -171,9 +173,12 @@ export default {
     getTheme() {
       return store.state.theme;
     },
-    getBossPartyTableList() {
-      return store.state.bossParty;
-    },
+    // getBossPartyTableList() {
+    //   return store.state.bossParty;
+    // },
+  },
+  mounted() {
+    this.bossPartyTableList = store.state.bossParty;
   },
 };
 </script>

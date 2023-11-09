@@ -3,6 +3,6 @@ const path = require("path");
 
 module.exports = defineConfig({
   transpileDependencies: true,
-  publicPath: "https://torrythemaltese.github.io/boss-dolmengi",
+  publicPath: "/boss-dolmengi",
   outputDir: path.resolve(__dirname, "docs"),
 });
