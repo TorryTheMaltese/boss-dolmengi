@@ -3,6 +3,6 @@ const path = require("path");
 
 module.exports = defineConfig({
   transpileDependencies: true,
-  publicPath: "/dolmengi-boss-party",
+  publicPath: "/boss-dolmengi",
   outputDir: path.resolve(__dirname, "docs"),
 });
