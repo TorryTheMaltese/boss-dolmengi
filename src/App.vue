@@ -1,28 +1,51 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div :class="getTheme">
+    <HeaderBox />
+    <div class="container">
+      <boss-party-table></boss-party-table>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import store from "./stores/store.js";
+import HeaderBox from "./components/HeaderBox.vue";
+import BossPartyTable from "./components/BossPartyTable.vue";
 
 export default {
-  name: 'App',
+  name: "App",
+  store,
   components: {
-    HelloWorld
-  }
-}
+    HeaderBox,
+    BossPartyTable,
+  },
+  computed: {
+    getTheme() {
+      return store.state.theme;
+    },
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+@import "./styles/themes.scss";
+@import "./styles/_variables.scss";
+
+@each $theme in $themes {
+  .#{map-get($theme, "name")} {
+    background-color: map-get($map: $theme, $key: "background");
+    color: map-get($map: $theme, $key: "text");
+    width: 100%;
+    min-height: 100%;
+    .container {
+      position: relative;
+      width: 100%;
+      box-sizing: border-box;
+      max-width: $max-width;
+      margin: auto;
+      display: flex;
+      background-color: map-get($map: $theme, $key: "background");
+    }
+  }
 }
 </style>

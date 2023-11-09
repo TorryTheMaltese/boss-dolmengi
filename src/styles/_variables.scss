@@ -1,0 +1,32 @@
+$black: #151515;
+$dark-gray: #676767;
+$gray: #cecece;
+$light-gray: #e2e2e2;
+$semi-white: #f3f3f3;
+$white: #ffffff;
+
+$error-msg: #ed4337;
+
+$main-color: #f68600;
+
+$content-box-shadow: 1px 1px 5px 0 rgba(1, 1, 1, 0.1);
+$content-box-shadow-hover: 1px 1px 5px 3px rgba(1, 1, 1, 0.1);
+$btn-shadow: 0px 3px rgba(0, 0, 0, 0.1);
+
+$max-width: 1080px;
+
+@font-face {
+  font-family: "MaplestoryOTFBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NEXON Lv2 Gothic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}

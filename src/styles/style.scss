@@ -1,0 +1,74 @@
+@import "./reset.scss";
+@import "./variables.scss";
+@import "./themes.scss";
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: "NEXON Lv2 Gothic";
+}
+
+button,
+input[type="button"] {
+  padding: 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: "NEXON Lv2 Gothic";
+  font-weight: bold;
+  border: none;
+  outline: none;
+  background-color: $main-color;
+
+  &:active,
+  &:focus {
+    border: none;
+  }
+}
+
+select {
+  position: relative;
+  display: block;
+  font-family: "NEXON Lv2 Gothic";
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  padding: 1rem;
+  font-weight: bold;
+  flex: 1;
+  user-select: none;
+
+  ::-ms-expand {
+    display: none;
+  }
+
+  &:hover {
+    background-color: $main-color;
+    color: $black;
+  }
+
+  option:hover,
+  option:hecked {
+    background-color: $main-color;
+  }
+}
+
+input {
+  border: none;
+  outline: none;
+  padding: 0.8rem;
+  border-radius: 20px;
+  font-family: "NEXON Lv2 Gothic";
+}
+
+table {
+  border-spacing: 1;
+  border-collapse: collapse;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 15px;
+  overflow: hidden;
+}
