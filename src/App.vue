@@ -2,7 +2,7 @@
   <div :class="getTheme">
     <HeaderBox />
     <div class="container">
-      <boss-party-table></boss-party-table>
+      <!-- <boss-party-table></boss-party-table> -->
     </div>
   </div>
 </template>
@@ -10,14 +10,14 @@
 <script>
 import store from "./stores/store.js";
 import HeaderBox from "./components/HeaderBox.vue";
-import BossPartyTable from "./components/BossPartyTable.vue";
+// import BossPartyTable from "./components/BossPartyTable.vue";
 
 export default {
   name: "App",
   store,
   components: {
     HeaderBox,
-    BossPartyTable,
+    // BossPartyTable,
   },
   computed: {
     getTheme() {
